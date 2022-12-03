@@ -22,13 +22,14 @@ a(3) = a(3-1) + a(3-2) = a(2) + a(1)
 """
 
 
-def ciag_f(element_ciagu):
-    if element_ciagu == 1:
+def get_fibonacci_value_for_n(n):
+    if n == 1:
         return 0
-    elif element_ciagu == 2:
+    elif n == 2:
         return 1
     else:
-        return ciag_f(element_ciagu - 1) + ciag_f(element_ciagu - 2)
+        return get_fibonacci_value_for_n(n - 1) + get_fibonacci_value_for_n(
+            n - 2)
 
 
 def ciag_f_iter(element_ciagu):
